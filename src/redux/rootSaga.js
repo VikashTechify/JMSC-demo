@@ -1,8 +1,8 @@
 // src/rootSaga.js
 
-import { all } from "redux-saga/effects";
-import { watchFetchPosts } from "./post/postSaga";
+import { all, fork } from "redux-saga/effects";
+import { watchFetchFiscalData } from "./fiscaldata/fiscaldataSaga";
 
 export default function* rootSaga() {
-  yield all([watchFetchPosts()]);
+  yield all([fork(watchFetchFiscalData)]);
 }

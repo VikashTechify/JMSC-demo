@@ -1,10 +1,10 @@
 // src/rootReducer.js
 
 import { combineReducers } from "@reduxjs/toolkit";
-import postReducer from "./post/postSlice";
+import fiscalDataReducer from "./fiscaldata/fiscaldataSlice";
 
 const rootReducer = combineReducers({
-  posts: postReducer,
+  fiscalData: fiscalDataReducer,
 });
 
 export default rootReducer;
